@@ -1,18 +1,18 @@
 #!/bin/bash
 
-#ƒ^ƒCƒ€ƒ][ƒ“‚Ìİ’è
+#ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã®è¨­å®š
 sudo timedatectl set-timezone Asia/Tokyo
 sudo ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-#‚Ì“¯Šú
+#æ™‚åˆ»ã®åŒæœŸ
 sudo sed -i 's/#NTP=/NTP=ntp.nict.jp/g' /etc/systemd/timesyncd.conf
 sudo timedatectl set-ntp true
 sudo systemctl restart systemd-timesyncd.service
 
-#ƒpƒbƒP[ƒWƒA[ƒJƒCƒuƒ~ƒ‰[JP•ÏX
+#ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ãƒŸãƒ©ãƒ¼JPå¤‰æ›´
 #sudo perl -p -i.bak -e 's%https?://(?!security)[^ \t]+%http://jp.archive.ubuntu.com/ubuntu/%g' /etc/apt/sources.list
 
-#ƒAƒbƒvƒf[ƒgŠm”F
+#ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç¢ºèª
 sudo apt update
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
@@ -20,9 +20,9 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt clean -y
 
-# ƒpƒbƒP[ƒWƒCƒ“ƒXƒg[ƒ‹
+# ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 sudo apt install -y git gcc g++ make openssl zlib1g-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev vim build-essential curl wget aptitude
 
-#Ä‹N“®
+#å†èµ·å‹•
 echo "reboot"
 sudo reboot
