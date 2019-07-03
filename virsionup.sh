@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-#ƒAƒbƒvƒf[ƒgŠm”F
-echo "ƒAƒbƒvƒf[ƒgŠm”F"
+#ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç¢ºèª
+echo "ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç¢ºèª"
 echo "update"
 sudo apt update
 echo "upgrade"
@@ -16,6 +16,6 @@ sudo apt autoremove -y
 echo "clean"
 sudo apt clean -y
 
-#OSƒo[ƒWƒ‡ƒ“ƒAƒbƒv
+#OSãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—
 echo "do-release-upgrade"
 sudo do-release-upgrade

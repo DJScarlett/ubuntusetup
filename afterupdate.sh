@@ -1,30 +1,30 @@
 #!/bin/bash
 
-#sources.list ƒtƒ@ƒCƒ‹‚ğƒoƒbƒNƒAƒbƒv
-echo "sources.list ƒtƒ@ƒCƒ‹‚ğƒoƒbƒNƒAƒbƒv"
+#sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—
+echo "sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—"
 sudo cp -p /etc/apt/sources.list ~/tmp/sources.list.backup
 
-#sources.list ƒtƒ@ƒCƒ‹‚ğ‘‚«Š·‚¦
-echo "sources.list ƒtƒ@ƒCƒ‹‚ğ‘‚«Š·‚¦"
+#sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãæ›ãˆ
+echo "sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãæ›ãˆ"
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list
 
-#ƒ^ƒCƒ€ƒ][ƒ“‚Ìİ’è
-echo "ƒ^ƒCƒ€ƒ][ƒ“‚Ìİ’è"
+#ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã®è¨­å®š
+echo "ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã®è¨­å®š"
 sudo timedatectl set-timezone Asia/Tokyo
 sudo ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-#‚Ì“¯Šú
-echo "#‚Ì“¯Šú"
+#æ™‚åˆ»ã®åŒæœŸ
+echo "#æ™‚åˆ»ã®åŒæœŸ"
 sudo sed -i 's/#NTP=/NTP=ntp.nict.jp/g' /etc/systemd/timesyncd.conf
 sudo timedatectl set-ntp true
 sudo systemctl restart systemd-timesyncd.service
 
-#ƒpƒbƒP[ƒWƒA[ƒJƒCƒuƒ~ƒ‰[JP•ÏX
-#echo "ƒpƒbƒP[ƒWƒA[ƒJƒCƒuƒ~ƒ‰[JP•ÏX"
+#ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ãƒŸãƒ©ãƒ¼JPå¤‰æ›´
+#echo "ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ãƒŸãƒ©ãƒ¼JPå¤‰æ›´"
 #sudo perl -p -i.bak -e 's%https?://(?!security)[^ \t]+%http://jp.archive.ubuntu.com/ubuntu/%g' /etc/apt/sources.list
 
-#ƒAƒbƒvƒf[ƒgŠm”F
-echo "ƒAƒbƒvƒf[ƒgŠm”F"
+#ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç¢ºèª
+echo "ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç¢ºèª"
 echo "update"
 sudo apt update
 echo "upgrade"
