@@ -17,5 +17,8 @@ echo "clean"
 sudo apt clean -y
 
 #OSバージョンアップ
+echo "update-manage"
+sudo apt install update-manage
 echo "do-release-upgrade"
 sudo do-release-upgrade
+sudo do-release-upgrade -d
