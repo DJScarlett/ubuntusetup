@@ -21,8 +21,6 @@ echo "update"
 sudo apt update
 echo "upgrade"
 sudo apt upgrade -y
-echo "dist-upgrade"
-sudo apt dist-upgrade -y
 echo "full-upgrade"
 sudo apt full-upgrade -y
 echo "autoremove"
