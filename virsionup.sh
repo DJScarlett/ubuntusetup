@@ -21,4 +21,3 @@ echo "update-manage"
 sudo apt install update-manage update-manager-core update-manager -y
 echo "do-release-upgrade"
 sudo do-release-upgrade
-sudo do-release-upgrade -d
