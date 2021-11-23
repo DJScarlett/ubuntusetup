@@ -30,4 +30,4 @@ sudo apt clean -y
 
 # パッケージインストール
 echo "パッケージインストール"
-sudo apt install -y git gcc g++ make openssl zlib1g-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev vim build-essential curl wget aptitude update-manager-core update-manager
+sudo apt install -y git gcc g++ make openssl zlib1g-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev vim build-essential curl wget aptitude
